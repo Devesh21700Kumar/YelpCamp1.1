@@ -5,6 +5,7 @@ var mongoose    = require("mongoose");
 var Campground =require('./models/campground');
 var Comment=require('./models/comment');
 var seedDB=require('./seeds');
+var flash =require('connect-flash');
 var passport    = require("passport");
 var LocalStrategy = require("passport-local");
 var	User= require("./models/user");
@@ -34,6 +35,8 @@ app.use(methodOverride("_method"));
 //SEEDED DATABASE
 //seedDB();
 
+app.use(flash());
+
 // PASSPORT CONFIGURATION
 app.use(require("express-session")({
     secret: "Once again Rusty wins cutest dog!",
@@ -47,10 +50,12 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 app.use(function(req, res, next){
+	//CHECK@
    res.locals.currentUser = req.user;
+   res.locals.error = req.flash("error");
+   res.locals.success = req.flash("success");
    next();
 });
-
 
 
 
