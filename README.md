@@ -46,23 +46,20 @@ Responsive web design
 Built with
 Front-end
 ejs
-Google Maps APIs
+
 Bootstrap
 Back-end
 express
 mongoDB
 mongoose
 async
-crypto
-helmet
+
 passport
 passport-local
 express-session
 method-override
-nodemailer
-moment
-cloudinary
-geocoder
+
+
 connect-flash
 
 PLATFORMS:-
