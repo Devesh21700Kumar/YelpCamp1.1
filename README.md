@@ -4,7 +4,7 @@ Known Vulnerabilities NSP Status
 A Node.js web application project from the Udemy course - The Web Developer Bootcamp by Colt Steele
 
 Live Demo
-To see the app in action, go to 
+To see the app in action, go to https://radiant-waters-21021.herokuapp.com/
 
 Features
 Authentication:
